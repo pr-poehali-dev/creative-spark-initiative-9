@@ -114,8 +114,8 @@ const Scene = () => {
 }
 
 export const Hero3DWebGL = () => {
-  const titleWords = "Synapse AI".split(" ")
-  const subtitle = "Нейроинтерфейсы нового поколения."
+  const titleWords = "Brawl Shop".split(" ")
+  const subtitle = "Лучшие аккаунты Brawl Stars. Быстро, безопасно, выгодно."
   const [visibleWords, setVisibleWords] = useState(0)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
   const [delays, setDelays] = useState<number[]>([])
@@ -157,7 +157,7 @@ export const Hero3DWebGL = () => {
                   opacity: index < visibleWords ? undefined : 0,
                 }}
               >
-                {word}
+                {index === 1 ? <span className="text-red-500">{word}</span> : word}
               </div>
             ))}
           </div>
@@ -171,6 +171,28 @@ export const Hero3DWebGL = () => {
             }}
           >
             {subtitle}
+          </div>
+        </div>
+        <div
+          className={`mt-8 flex gap-8 normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
+          style={{
+            animationDelay: `${titleWords.length * 0.13 + 0.6 + subtitleDelay}s`,
+            opacity: subtitleVisible ? undefined : 0,
+          }}
+        >
+          <div className="text-center">
+            <div className="text-2xl md:text-4xl font-bold text-red-500 font-orbitron">2000+</div>
+            <div className="text-xs md:text-sm text-gray-300 font-geist">довольных клиентов</div>
+          </div>
+          <div className="w-px bg-red-500/30" />
+          <div className="text-center">
+            <div className="text-2xl md:text-4xl font-bold text-red-500 font-orbitron">500+</div>
+            <div className="text-xs md:text-sm text-gray-300 font-geist">аккаунтов в наличии</div>
+          </div>
+          <div className="w-px bg-red-500/30" />
+          <div className="text-center">
+            <div className="text-2xl md:text-4xl font-bold text-red-500 font-orbitron">4.9★</div>
+            <div className="text-xs md:text-sm text-gray-300 font-geist">рейтинг магазина</div>
           </div>
         </div>
       </div>

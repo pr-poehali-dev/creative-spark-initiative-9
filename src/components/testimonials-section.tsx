@@ -3,25 +3,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const testimonials = [
   {
-    name: "Елена Родригес",
-    role: "Директор по нейронауке, Quantum Dynamics",
-    avatar: "/professional-woman-scientist.png",
-    content:
-      "SynapseAI изменил наш подход к нейрореабилитации. Результаты пациентов улучшились на 340% после внедрения.",
-  },
-  {
-    name: "Маркус Уильямс",
-    role: "Руководитель исследований, Stellar Analytics",
+    name: "Артём К.",
+    role: "Ранг Легенда 3, 1200+ кубков",
     avatar: "/cybersecurity-expert-man.jpg",
     content:
-      "Точность и протоколы безопасности не имеют аналогов. Мы значительно ускорили клинические испытания с платформой SynapseAI.",
+      "Брал аккаунт с 50+ бравлерами — всё пришло мгновенно после оплаты. Данные совпали с описанием, поддержка помогла быстро сменить email. Топ сервис!",
   },
   {
-    name: "Анна Ковальски",
-    role: "Вице-президент по разработке, Nova Industries",
-    avatar: "/asian-woman-tech-developer.jpg",
+    name: "Никита Р.",
+    role: "Покупатель, 3 аккаунта",
+    avatar: "/placeholder-user.jpg",
     content:
-      "Интеграция прошла безупречно. Адаптивные алгоритмы понимают намерения пользователя лучше любой системы, что мы тестировали.",
+      "Уже третий раз беру аккаунты здесь. Цены адекватные, выбор огромный, никаких проблем ни разу не было. Рекомендую всем своим друзьям.",
+  },
+  {
+    name: "Дарья М.",
+    role: "Мама игрока, подарок сыну",
+    avatar: "/professional-woman-scientist.png",
+    content:
+      "Купила сыну аккаунт в подарок. Менеджер помог выбрать под его уровень и бюджет. Сын в восторге — получил то, что хотел. Спасибо!",
   },
 ]
 
@@ -30,9 +30,9 @@ export function TestimonialsSection() {
     <section className="py-24 px-6 bg-card">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Нам доверяют лидеры</h2>
+          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Что говорят покупатели</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Что говорят лидеры индустрии о нашей революционной технологии
+            Более 2000 довольных игроков уже купили аккаунты в нашем магазине
           </p>
         </div>
 
