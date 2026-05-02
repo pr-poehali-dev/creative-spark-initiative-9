@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 
+const TELEGRAM_URL = "https://t.me/your_shop"
+
 export function CTASection() {
   return (
     <section className="py-24 px-6 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
@@ -14,6 +16,7 @@ export function CTASection() {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90 pulse-button text-lg px-8 py-4"
+              onClick={() => document.getElementById("catalog")?.scrollIntoView({ behavior: "smooth" })}
             >
               Смотреть каталог
             </Button>
@@ -21,6 +24,7 @@ export function CTASection() {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 bg-transparent"
+              onClick={() => window.open(TELEGRAM_URL, "_blank")}
             >
               Написать в поддержку
             </Button>

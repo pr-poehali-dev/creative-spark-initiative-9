@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
+const TELEGRAM_URL = "https://t.me/your_shop"
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -20,7 +22,7 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <a
-                href="#features"
+                href="#catalog"
                 className="font-geist text-white hover:text-red-500 transition-colors duration-200"
               >
                 Каталог
@@ -36,7 +38,12 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-red-500 hover:bg-red-600 text-white font-geist border-0">Купить аккаунт</Button>
+            <Button
+              className="bg-red-500 hover:bg-red-600 text-white font-geist border-0"
+              onClick={() => window.open(TELEGRAM_URL, "_blank")}
+            >
+              Купить аккаунт
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -55,7 +62,7 @@ export function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/98 border-t border-red-500/20">
               <a
-                href="#features"
+                href="#catalog"
                 className="block px-3 py-2 font-geist text-white hover:text-red-500 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
@@ -76,7 +83,10 @@ export function Navbar() {
                 Вопросы
               </a>
               <div className="px-3 py-2">
-                <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-geist border-0">
+                <Button
+                  className="w-full bg-red-500 hover:bg-red-600 text-white font-geist border-0"
+                  onClick={() => window.open(TELEGRAM_URL, "_blank")}
+                >
                   Купить аккаунт
                 </Button>
               </div>
